@@ -76,28 +76,58 @@
 
 
     //ZADANIE 2 - funkcja obliczStatystyki ona ma wywolywac funckje min, max, srednia, suma.
-    function obliczStatystyki(array $liczby): array{
-        
-
+    function obliczStatystyki($liczby){
+        return [
+            "min" => obliczMin($liczby),
+            "max" => obliczMax($liczby),
+            "srednia" => obliczSrednia($liczby),
+            "suma" => obliczSume($liczby)
+        ];
     }
 
-    function obliczMin(array $arr){
-        $min = 0;
-        for($i = 0; $i <= count($arr)){
-            if($i)
+    function obliczMin($arr){
+        $min = $arr[0];
+
+        foreach($arr as $liczba){
+            if($liczba < $min){
+                $min = $liczba;
+            }
         }
+
+        return $min;
     }
 
-    function obliczMax(array $arr){
-        
-    } 
+    function obliczMax($arr){
+        $max = $arr[0];
 
-    function obliczSrednia(array $arr){
-        
+        foreach($arr as $liczba){
+            if($liczba > $max){
+                $max = $liczba;
+            }
+        }
+
+        return $max;
     }
 
-    function obliczSume(array $arr){
-        
+    function obliczSrednia($arr){
+        $suma = obliczSume($arr);
+        $ileLiczb = 0;
+
+        foreach($arr as $liczba){
+            $ileLiczb++;
+        }
+
+        return $suma / $ileLiczb;
+    }
+
+    function obliczSume($arr){
+        $suma = 0;
+
+        foreach($arr as $liczba){
+            $suma = $suma + $liczba;
+        }
+
+        return $suma;
     }
 
 ?>
