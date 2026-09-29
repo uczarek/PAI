@@ -42,7 +42,31 @@ echo "<br><br>";
                 $max = $liczba;
         }
     }
-    
     echo "[" . "1, 4, 3, 6, 8, 9, 2] max z tablicy: " . $max; 
+    echo "<br><br>";
 
+
+
+    //ZADANIE 1 (wyświetl szachowince)
+    for($i = 0; $i < 8; $i++){
+        for($j = 0; $j < 8; $j++){
+            if(($i + $j) % 2 == 0){
+                echo "X ";
+            }else{
+                echo "O ";
+            }
+        }
+        echo "<br>";
+    }
+    echo "<br>";
+
+
+    
+    //ZADANIE 2 (wyswietl tavlicze mnozenia)
+    for($i = 1; $i <= 10; $i++){
+        for($j = 1; $j <= 10; $j++){
+            echo $i * $j . " ";
+        }
+        echo "<br>";
+    }
 ?>
