@@ -16,5 +16,5 @@
             let width = document.getElementById("width").value;
             let surface = document.getElementById("surface").value;
             
-            document.getElementById("result2").textContent = `Ilosc plytek: ${(length*width)/surface}`
+            document.getElementById("result2").textContent = `Ilosc plytek: ${Math.ceil((length*width)/surface)}`
         }
