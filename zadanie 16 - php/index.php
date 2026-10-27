@@ -54,7 +54,6 @@
 
     <?php
         if(isset($_POST['name1']) && isset($_POST["price"]) && isset($_POST['amount'])){
-
             $name = $_POST['name1'];
             $price = $_POST['price'];
             $amount = $_POST['amount'];
@@ -64,7 +63,6 @@
             echo "Cena jednostkowa: $price" . "<br>";
             echo "Ilosc sztuk: $amount" . "<br>";
             echo "Łączny koszt: $totalCost" . "<br>";
-
             }
     ?>
 
