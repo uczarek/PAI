@@ -36,7 +36,7 @@
                 $price = (int) $_POST['price'];
                 $amount = (int) $_POST['amount'];
 
-                $_SESSION['koszyk'][] = [
+                $_SESSION['cart'][] = [
                     'name' => $name,
                     'price' => $price,
                     'amount' => $price
@@ -54,8 +54,8 @@
         </tr>
 
         <?php
-            if(!empty(($_SESSION['koszyk']))){
-                foreach($_SESSION['koszyk'] as $product){
+            if(!empty(($_SESSION['cart']))){
+                foreach($_SESSION['cart'] as $product){
                     echo "<tr>";
                     echo "<td>" . $product['name'] . "</td>";
                     echo "<td>" . $product['price'] . "</td>";
@@ -70,7 +70,7 @@
     <?php
         $cartValue = 0;
 
-        foreach($_SESSION['koszyk'] as $produkt){
+        foreach($_SESSION['cart'] as $produkt){
             $cartValue += ((int) $product['price']) * ((int) $product['amount']);
         }
 
@@ -91,7 +91,7 @@
 
     <?php
         if(isset($_POST['clearBtn'])){
-            unset($_SESSION['koszyk']);
+            unset($_SESSION['cart']);
         }
     ?>
     
