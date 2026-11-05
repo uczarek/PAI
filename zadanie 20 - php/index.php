@@ -8,9 +8,7 @@
     $conn = mysqli_connect($host, $username, $password, $database);
 
     if(!$conn){
-        die("Połączenie się nie powiodło: " . "<br><br>");
-    } else {
-        echo "Połączenie się powiodło" . "<br><br>";
+        die("Połączenie się nie powiodło!<br>");
     }
 ?>
 
