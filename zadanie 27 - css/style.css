@@ -1,0 +1,60 @@
+#container {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-areas:
+    "header1 header1 header1" 
+    "nav section aside"
+    "footer1 footer1 footer1";
+}
+
+#header1 {
+    grid-area: header1;
+    background-color: red;
+    height: 100px;
+}
+
+nav {
+    grid-area: nav;
+    background-color: blue;
+    height: 700px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "header2" "article" "footer2";
+    grid-area: section;
+    background-color: gray;
+    height: 700px;
+}
+
+aside {
+    grid-area: aside;
+    background-color: green;
+    height: 700px;
+}
+
+#footer1 {
+    grid-area: footer1;
+    background-color: orange;
+    height: 100px;
+}
+
+#header2 {
+    grid-area: header2;
+    background-color: lightgray;
+    height: 150px;
+}
+
+article {
+    grid-area: article;
+    background-color: darkgray;
+    height: 400px;
+}
+
+
+#footer2 {
+    grid-area: footer2;
+    background-color: lightgray;
+    height: 150px;
+}

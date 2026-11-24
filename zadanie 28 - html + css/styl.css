@@ -1,0 +1,74 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0px;
+    background-color: rgb(228, 207, 179);
+
+}
+
+.strona {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 200px 1fr 250px;
+    grid-template-areas: 
+    "header header header"
+    "nav main aside"
+    "footer footer foter";
+}
+
+header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "tytul haslo";
+    grid-area: header;
+    padding: 15px;
+    background-color: brown;
+}
+
+header h1 {
+    grid-area: tytul;
+}
+
+header p {
+    grid-area: haslo;
+}
+
+nav {
+    grid-area: nav;
+    padding: 15px;
+    background-color: burlywood;
+}
+
+main {
+    grid-area: main;
+    padding: 15px;
+    background-color: blanchedalmond;
+}
+
+aside {
+    grid-area: aside;
+    padding: 15px;
+    background-color: burlywood;
+}
+
+footer {
+    grid-area: footer;
+    padding: 15px;
+    background-color: brown;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:15px;
+}
+
+.cena {
+    font-weight: bold;
+}
+
+.karta {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px gray;
+}
+
