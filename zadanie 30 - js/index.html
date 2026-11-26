@@ -30,7 +30,7 @@
                 for (let j = 1; j <= n; j++) {
                     let komorka = document.createElement("td");
 
-                    komorka.textContent = i * j;
+                    komorka.textContent = (i*j);
 
                     if (i == j){
                         komorka.style.backgroundColor = "LightBlue";
@@ -38,6 +38,7 @@
 
                     wiersz.appendChild(komorka);
                 }
+                tabela.style.borderStyle = "solid";
                 tabela.appendChild(wiersz);
             }
 
